@@ -13,7 +13,7 @@ import unergInterp
 # interactive mode below
 if len(sys.argv) == 2:
     data = open(sys.argv[1]).read()
-    prog = basparse.parse(data)
+    prog = unergparse.parse(data)
     if not prog: raise SystemExit
     b = unergInterp.BasicInterpreter(prog)
     try:
